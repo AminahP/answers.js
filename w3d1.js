@@ -30,9 +30,9 @@ class Hamster {
     }
   }
   
-  ham = new Hamster(owner = tim, name = "Tim", price = 5);
-  ham.getPrice()
-  console.log(ham.getPrice(),  ham.wheelRun(),  "have fun!")
+  // const ham = new Hamster( 'tim', Tim,  5);
+  // ham.getPrice()
+  // console.log(ham.getPrice(),  ham.wheelRun(),  "have fun!")
  
   
   // Git commit created hamster class
@@ -59,7 +59,7 @@ class Hamster {
   exercise() - decrement weight
   ageUp() - increment age, increment height, increment weight, decrement mood, increment bank account by 10 (birthday money)
   buyHamster(hamster) - push the hamster object onto the hamster array, increment mood by 10, decrement bankAccount by the value of the hamster (hint: use getPrice())
-  */
+  // */
   class Person {
     constructor(name, age = 0, height = 0, weight = 0, mood = 0, hamsters = [], bankAccount = 0) {
       this.name = name;
@@ -106,12 +106,12 @@ class Hamster {
     buyHamster(hamsters){
       this.hamsters.push.hamsters // push hamster object on hamster array .push 
       this.mood += 10;
-      this.bankAccount - ham.getPrice(Hamster)
+      this.bankAccount - ham.getPrice(hamster)
   
     }
   }
   // Need to use the class after defining it
- tim = new Person(name = "me", age = 100, height = 10, weight = 2000, mood = 1, bankAccount = 1000000);
+//  const Tim = new Person( "me", 100, 10, 2000, 1, 1000000);
   
   
   
@@ -134,8 +134,86 @@ class Hamster {
   Have Timmy exercise twice
   */
     const timmy = new Person ('Timmy');
-        timmy.getAge += 5  
+        timmy.this.Age += 5 ;
+        console.log(timmy);
+        timmy.exercise += 5;
+        console.log(timmy)
+        timmy.eat += 5;
+        console.log(timmy)
+        timmy.ageUp += 4;
+        console.log(timmy)
+        const gus = new Hamster ('Timmy', 'Gus');
+        console.log(gus)
+        timmy.buyHamster(gus);
+        console.log(timmy)
+        timmy.ageUp += 6;
+        console.log(timmy)
+        timmy.eat += 2;
+        console.log(timmy)
+        timmy.excercise += 2;
+        console.log(timmy)
+
+
+
+
+
+
+
+
+
+
+
+
+        /*
+        Chef Make Dinners
+Chef should be a factory of Dinner
+Add a constructor to dinner that sets the string properties, appetizer, entree and dessert.
+Add a method on chef that takes three arguments and returns a new Dinner based on those arguments.
+Have the Chef create 3 dinners, log the dinners
         
+        */ 
+
+class Dinner {
+  constructor(type, appetizer, entree, dessert){
+    this.type = type;
+    this.appetizer = appetizer;
+    this.entree = entree;
+    this.dessert = dessert;
+  }
+}
+
+class Chef {
+  constructor(mealType){
+    this.mealType = mealType;
+    this.listOfMeals = [];
+  }
+makeNewMeal (appetizer, entree, dessert){
+  const newDinner = new Dinner(this.mealType, appetizer, entree, dessert);
+  this.listOfMeals.push(newDinner);
+}
+printNewMeal(){
+  for (let choice of this.listOfMeals){
+     console.log(choice);
+  }
+} 
+}
+
+
+let italianDinner = new Chef('Italian');
+let texMexDinner = new Chef('Tex-Mex');
+let seafoodDinner = new Chef('Seafood');
+
+italianDinner.makeNewMeal('bruchetta', 'chicken parmesan', 'cherry cheesecake');
+texMexDinner.makeNewMeal('chips and queso', 'steak fajitas', 'sopapillas');
+seafoodDinner.makeNewMeal('oyster shooters', "lobster po' boys", 'lemon meringue pie');
+
+italianDinner.printNewMeal();
+texMexDinner.printNewMeal();
+seafoodDinner.printNewMeal();
+
+
+
+    
   // getAge is always going to be 25 years old for timmy, lol jk
    
   
